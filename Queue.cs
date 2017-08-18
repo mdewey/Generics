@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 using System.Collections.Generic;
-namespace Queue
+namespace Generics
 {
     // This is a FIFO structure, useful for notifications 
     // and transactions and ordering tasks
@@ -18,7 +18,7 @@ namespace Queue
 
         // add item to end of queue
         public void Push(T item) => queue.Add(item);
-
+        public bool Peek { get => queue.Any(); }
 
     }
 }
