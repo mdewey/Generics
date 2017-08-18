@@ -5,13 +5,14 @@ namespace Generics
 {
     // This is a FIFO structure, useful for notifications 
     // and transactions and ordering tasks
-    public class Queue<T>
+    public class Queue<T> //where T: ICanFly
     {
         private IList<T> queue = new List<T>();
 
         // remove item from queue
         public T Pop() {
             var item = queue.First();
+            //    item.Fly();
             queue.RemoveAt(0);
             return item;
         }
